@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Especialidades | Scarf Club</title>
+<meta name="description" content="Apresentações de especialidades do Clube de Desbravadores Scarf Club, para instrutores e desbravadores.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23FFD400'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y:#FFD400; --soft:#F4F4F2; --g:#767676; --line:#E7E7E4;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"Poppins","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:#000;background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+
+/* ---------- topo ---------- */
+.top{background:#000;color:#fff;overflow:hidden}
+.top-in{max-width:1240px;margin:0 auto;padding:36px 32px 0;display:grid;grid-template-columns:1fr 440px;gap:40px;align-items:end;min-height:560px}
+.brand img{width:150px}
+.top h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(46px,12vw,140px);line-height:1.1;margin:56px 0 0}
+.top .lead{font-size:18px;color:#BDBDBD;max-width:520px;line-height:1.6;margin:18px 0 0}
+.top .lead b{color:#fff;font-weight:600}
+.txt{padding-bottom:64px}
+
+.latest{position:relative;height:500px}
+.latest .circle{position:absolute;left:50%;bottom:86px;width:360px;height:360px;transform:translateX(-50%);border-radius:50%;background:var(--y)}
+.latest img{position:absolute;left:50%;bottom:84px;height:420px;transform:translateX(-50%);filter:drop-shadow(0 18px 24px rgba(0,0,0,.35));transition:transform .35s}
+.latest a:hover img{transform:translateX(-50%) translateY(-10px)}
+.latest .ini{position:absolute;left:50%;bottom:86px;width:360px;height:360px;transform:translateX(-50%);display:grid;place-items:center;font-family:var(--display);font-size:200px;color:#000}
+.latest .cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-size:15px;color:#BDBDBD}
+.latest .cap b{color:#fff;font-weight:600}
+.latest a{position:absolute;inset:0;text-decoration:none}
+
+/* ---------- busca ---------- */
+main{max-width:1240px;margin:0 auto;padding:56px 32px 40px}
+.tools{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.search{position:relative;flex:1 1 320px;max-width:460px}
+.search input{width:100%;font:inherit;font-size:17px;padding:14px 18px 14px 50px;border:0;border-radius:999px;background:var(--soft)}
+.search input:focus{outline:3px solid var(--y);outline-offset:0}
+.search svg{position:absolute;left:18px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--g)}
+.total{font-size:15px;color:var(--g)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 48px}
+.chip{border:0;background:var(--soft);padding:9px 18px;border-radius:999px;font-size:15px;font-weight:500;cursor:pointer;transition:background .2s}
+.chip:hover{background:#E9E9E5}
+.chip[aria-pressed="true"]{background:#000;color:#fff}
+
+/* ---------- vitrine ---------- */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:56px 40px}
+.item{display:flex;flex-direction:column}
+.pic{position:relative;height:250px;text-decoration:none;display:flex;align-items:flex-end;justify-content:center;border-bottom:8px solid var(--y);padding-bottom:12px}
+.pic img{max-height:100%;max-width:92%;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.18));transition:transform .3s}
+.item:hover .pic img{transform:translateY(-8px)}
+.pic .ini{width:170px;height:170px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-family:var(--display);font-size:92px;color:#000;margin-bottom:6px}
+.area{font-size:14px;color:var(--g);margin:18px 0 2px}
+.item h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:34px;line-height:1.15;margin:0}
+.meta{font-size:14px;color:var(--g);margin-top:6px}
+.new{display:inline-block;background:var(--y);color:#000;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:2px}
+.acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:auto;padding-top:16px}
+.meta{margin-bottom:0}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:0;cursor:pointer;border-radius:999px;font-size:14px;font-weight:600;padding:10px 16px;transition:background .2s,transform .2s}
+.btn.main{background:#000;color:#fff}
+.btn.main:hover{background:var(--y);color:#000}
+.btn.sec{background:var(--soft)}
+.btn.sec:hover{background:#E9E9E5}
+.btn.icon{padding:10px;width:42px;height:42px;justify-content:center}
+.btn svg{width:18px;height:18px;flex:none}
+.soon .pic{border-bottom-color:var(--line)}
+.soon .pic img{filter:grayscale(1);opacity:.45}
+.soon .tag{font-size:15px;font-weight:600;color:var(--g);margin-top:16px}
+
+.empty{display:none;padding:40px 0;font-size:18px;color:var(--g)}
+.empty button{border:0;background:none;padding:0;font-weight:600;color:#000;text-decoration:underline;cursor:pointer}
+
+/* ---------- rodapé ---------- */
+footer{background:#000;color:#BDBDBD;margin-top:72px}
+.foot{max-width:1240px;margin:0 auto;padding:48px 32px;display:flex;flex-wrap:wrap;gap:24px 60px;align-items:center;justify-content:space-between;font-size:15px;line-height:1.6}
+.foot b{color:#fff;font-weight:600}
+.foot img{width:120px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,120px);visibility:hidden;background:#000;color:#fff;padding:12px 22px;border-radius:999px;font-size:15px;font-weight:500;transition:transform .3s;z-index:10}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+
+@media (max-width:860px){
+  .top-in{grid-template-columns:1fr;min-height:0;gap:0}
+  .top h1{margin-top:36px}
+  .txt{padding-bottom:10px}
+  .latest{height:400px}
+  .latest .circle,.latest .ini{width:270px;height:270px}
+  .latest .ini{font-size:150px}
+  .latest img{height:320px}
+  main{padding-top:40px}
+  .shelf{gap:48px 28px}
+  .pic{height:210px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="txt">
+      <div class="brand"><img src="logo/logo_claro.webp" alt="Scarf Club"></div>
+      <h1>Especialidades</h1>
+      <p class="lead" id="lead">Apresentações do Scarf Club para instrutores e desbravadores.</p>
+    </div>
+    <div class="latest" id="latest"></div>
+  </div>
+</header>
+
+<main>
+  <div class="tools">
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input type="search" id="q" placeholder="Buscar especialidade" aria-label="Buscar especialidade">
+    </label>
+    <span class="total" id="total"></span>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar por área"></div>
+  <div class="shelf" id="shelf"></div>
+  <p class="empty" id="empty">Nenhuma especialidade com esse nome. <button id="clear">Limpar a busca</button></p>
+</main>
+
+<footer>
+  <div class="foot">
+    <img src="logo/logo_claro.webp" alt="Scarf Club">
+    <p><b>Vai dar aula sem internet?</b> Toque em Baixar antes e abra o arquivo no navegador.<br>Espaço revela as respostas, as setas trocam de slide e F abre em tela cheia.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ==============================================================
+   LISTA DE ESPECIALIDADES
+   Para adicionar uma nova, copie um bloco { ... }, cole abaixo e
+   troque os dados. A página se atualiza sozinha: vitrine, filtros,
+   contagem e o destaque do topo (a publicada mais recente).
+
+   nome       nome que aparece na página
+   area       área da especialidade (vira filtro automaticamente)
+   arquivo    caminho do HTML dentro da pasta "especialidades"
+   capa       imagem da vitrine na pasta "capas" (opcional;
+              sem ela aparece a inicial do nome)
+   requisitos quantidade de requisitos (opcional)
+   data       data de publicação, no formato AAAA-MM-DD
+   emBreve    true = aparece como "Em breve", sem link
+   ============================================================== */
+const ESPECIALIDADES = [
+  {
+    nome: "Sementes",
+    area: "Estudos da Natureza",
+    arquivo: "especialidades/especialidade-de-sementes.html",
+    capa: "capas/sementes.webp",
+    requisitos: 10,
+    data: "2026-09-19"
+  },
+
+  // Modelo para a próxima (apague as barras // do começo das linhas):
+  // {
+  //   nome: "Cães",
+  //   area: "Estudos da Natureza",
+  //   arquivo: "especialidades/especialidade-de-caes.html",
+  //   capa: "capas/caes.webp",
+  //   requisitos: 13,
+  //   data: "2026-10-01"
+  // },
+
+  // Para anunciar uma que ainda está em preparo:
+  // { nome: "Aves", area: "Estudos da Natureza", emBreve: true },
+];
+
+/* Quantos dias um item continua com a marca "Nova" */
+const DIAS_NOVIDADE = 30;
+
+/* ==============================================================
+   Daqui para baixo não precisa mexer.
+   ============================================================== */
+const $ = id => document.getElementById(id);
+const norm = s => (s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const inicial = n => (n||"?").trim().charAt(0).toUpperCase();
+const hoje = new Date();
+const ehNova = e => e.data && !e.emBreve && (hoje - new Date(e.data+"T12:00")) / 864e5 <= DIAS_NOVIDADE;
+
+const prontas = ESPECIALIDADES.filter(e => !e.emBreve);
+const lista = [...ESPECIALIDADES].sort((a,b) =>
+  (a.emBreve?1:0) - (b.emBreve?1:0) || a.nome.localeCompare(b.nome,"pt-BR"));
+const areas = [...new Set(ESPECIALIDADES.map(e => e.area).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"pt-BR"));
+let areaAtiva = "", busca = "";
+
+const ICON = {
+  play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg>',
+  down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>',
+  link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg>'
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* topo: contagem e destaque da mais recente */
+const n = prontas.length;
+$("lead").innerHTML = `Apresentações do Scarf Club para instrutores e desbravadores. <b>${n} ${n===1?"especialidade pronta":"especialidades prontas"}</b> para usar na aula.`;
+const recente = [...prontas].sort((a,b) => (b.data||"").localeCompare(a.data||""))[0];
+if (recente) {
+  $("latest").innerHTML = `
+    <div class="circle"></div>
+    ${recente.capa ? `<img src="${esc(recente.capa)}" alt="">` : `<div class="ini" aria-hidden="true">${inicial(recente.nome)}</div>`}
+    <p class="cap">Mais recente: <b>${esc(recente.nome)}</b></p>
+    <a href="${esc(recente.arquivo)}" aria-label="Abrir a especialidade de ${esc(recente.nome)}"></a>`;
+}
+
+/* filtros por área */
+function chips(){
+  if (areas.length < 2) { $("chips").style.display = "none"; return; }
+  $("chips").innerHTML = ["", ...areas].map(a =>
+    `<button class="chip" data-a="${esc(a)}" aria-pressed="${a===areaAtiva}">${a ? esc(a) : "Todas"}</button>`).join("");
+}
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  areaAtiva = b.dataset.a; chips(); render();
+});
+
+/* vitrine */
+function card(e){
+  const pic = e.capa ? `<img src="${esc(e.capa)}" alt="" loading="lazy">` : `<div class="ini" aria-hidden="true">${inicial(e.nome)}</div>`;
+  const meta = [e.requisitos ? `${e.requisitos} requisitos` : "", "quiz no final"].filter(Boolean).join(", ");
+  if (e.emBreve) return `
+    <article class="item soon">
+      <div class="pic">${pic}</div>
+      ${e.area ? `<p class="area">${esc(e.area)}</p>` : ""}
+      <h2>${esc(e.nome)}</h2>
+      <p class="tag">Em breve</p>
+    </article>`;
+  const arquivo = e.arquivo.split("/").pop();
+  return `
+    <article class="item">
+      <a class="pic" href="${esc(e.arquivo)}" tabindex="-1" aria-hidden="true">${pic}</a>
+      ${e.area ? `<p class="area">${esc(e.area)}</p>` : ""}
+      <h2>${esc(e.nome)}${ehNova(e) ? '<span class="new">Nova</span>' : ""}</h2>
+      <p class="meta">${meta}</p>
+      <div class="acts">
+        <a class="btn main" href="${esc(e.arquivo)}">${ICON.play}Apresentar</a>
+        <a class="btn sec" href="${esc(e.arquivo)}" download="${esc(arquivo)}">${ICON.down}Baixar</a>
+        <button class="btn sec icon" data-link="${esc(e.arquivo)}" aria-label="Copiar o link de ${esc(e.nome)}" title="Copiar link">${ICON.link}</button>
+      </div>
+    </article>`;
+}
+function render(){
+  const q = norm(busca);
+  const vis = lista.filter(e => (!areaAtiva || e.area === areaAtiva) && (!q || norm(e.nome + " " + e.area).includes(q)));
+  $("shelf").innerHTML = vis.map(card).join("");
+  $("empty").style.display = vis.length ? "none" : "block";
+  const m = vis.filter(e => !e.emBreve).length;
+  $("total").textContent = (q || areaAtiva) ? `${m} de ${n} ${n===1?"especialidade":"especialidades"}` : "";
+}
+$("q").addEventListener("input", e => { busca = e.target.value; render(); });
+$("clear").onclick = () => { busca = ""; areaAtiva = ""; $("q").value = ""; chips(); render(); $("q").focus(); };
+
+/* copiar link (para mandar no WhatsApp do clube) */
+let t;
+function aviso(msg){ const el = $("toast"); el.textContent = msg; el.classList.add("on"); clearTimeout(t); t = setTimeout(()=>el.classList.remove("on"), 2200); }
+$("shelf").addEventListener("click", async e => {
+  const b = e.target.closest("[data-link]"); if (!b) return;
+  const url = new URL(b.dataset.link, location.href).href;
+  try { await navigator.clipboard.writeText(url); aviso("Link copiado"); }
+  catch { prompt("Copie o link:", url); }
+});
+
+chips(); render();
+</script>
+</body>
+</html>

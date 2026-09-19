@@ -1,0 +1,30 @@
+COMO ADICIONAR UMA NOVA ESPECIALIDADE
+=====================================
+
+1. Coloque o HTML da apresentação na pasta "especialidades".
+   Ex.: especialidades/especialidade-de-aves.html
+
+2. (Opcional) Coloque uma imagem de capa na pasta "capas".
+   De preferência PNG ou WebP com fundo transparente, até uns 700 px.
+   Ex.: capas/aves.webp
+   Sem capa, a página mostra a inicial do nome num círculo.
+
+3. Abra o index.html, procure "LISTA DE ESPECIALIDADES" e acrescente:
+
+  {
+    nome: "Aves",
+    area: "Estudos da Natureza",
+    arquivo: "especialidades/especialidade-de-aves.html",
+    capa: "capas/aves.webp",
+    requisitos: 12,
+    data: "2026-10-15"
+  },
+
+   Não esqueça a vírgula depois da chave }.
+
+4. Envie os arquivos para o GitHub. Em 1 a 2 minutos a página atualiza.
+
+A mais recente (pela data) vai para o destaque do topo e ganha a
+marca "Nova" por 30 dias. As áreas viram filtros sozinhas.
+Para anunciar uma que ainda está em preparo, use:
+  { nome: "Aves", area: "Estudos da Natureza", emBreve: true },
